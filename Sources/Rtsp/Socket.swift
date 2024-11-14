@@ -32,7 +32,6 @@ public class Socket: NSObject, StreamDelegate {
         UDP socket
     */
     public init(host: String, localPort: Int, port: Int) {
-        
         self.host = host
         let localEndpoint = NWEndpoint.hostPort(host: "0.0.0.0", port: NWEndpoint.Port("\(localPort)")!)
         let parameters = NWParameters.udp

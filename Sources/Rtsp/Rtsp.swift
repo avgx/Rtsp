@@ -1,3 +1,5 @@
+//Some links to read later
+
 //TODO: nwprotocolframer
 /// https://developer.apple.com/documentation/network/nwprotocolframer
 /// 
