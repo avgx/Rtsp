@@ -88,6 +88,12 @@ public class RtspClient {
             } else {
                 //ok
                 print("ok")
+                return Array(
+                    describeResp.text
+                        .lines
+                        .drop(while: { $0 != ""})
+                        .drop(while: { $0 == ""})
+                )
             }
         }
         
