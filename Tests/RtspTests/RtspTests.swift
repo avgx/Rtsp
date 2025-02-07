@@ -3,6 +3,13 @@ import CoreMedia
 @testable import Rtsp
 
 final class RtspTests: XCTestCase {
+    func testImou() async throws {
+        let rtsp = RtspClient()
+        //let sdp1 = try await rtsp.check(url: "rtsp://admin:L2A43F84@192.168.1.64:554/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif", describe: true)
+        let sdp1 = try await rtsp.check(url: "rtsp://192.168.1.89:554/0/av0", describe: true)
+        print(sdp1)
+    }
+    
     func testDemo() async throws {
         
         let rtsp = RtspClient()

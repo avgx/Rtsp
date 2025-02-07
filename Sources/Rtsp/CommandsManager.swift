@@ -35,7 +35,8 @@ public class CommandsManager {
     }
     
     public func createDescribe() -> String {
-        let options = "DESCRIBE rtsp://\(host!):\(port!)\(path!) RTSP/1.0\r\n\(addHeader())\r\n"
+        let acceptSDP = "Accept: application/sdp\r\n"
+        let options = "DESCRIBE rtsp://\(host!):\(port!)\(path!) RTSP/1.0\r\n\(addHeader())\(acceptSDP)\r\n"
         print(options)
         return options
     }
